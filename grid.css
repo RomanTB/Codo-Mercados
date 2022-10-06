@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+}
+.contenedor {
+    display: grid;
+    /* grid-template-columns: 100px 100px 100px; la cantidad de valores determina la cantidad de columnas*/
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* fr significa fracciones */
+    /* grid-template-columns: 3fr 6fr 3fr; */
+    grid-template-columns: repeat(3, 1fr); /*repetime 1fr por 3 */
+    /* grid-template-rows: 3fr 2fr 3fr; */
+    grid-auto-rows: 1fr; /*que hacer cuando se agregan filas nuevas */
+    /* column-gap: 2px;
+    row-gap: 2px; */
+    gap: 2px;
+    align-content: space-between;
+    justify-content: space-evenly;
+    /* grid-template-areas:
+    'header header header header'
+    'izq main main main'
+    'izq main main main'
+    'publi main main main'
+    'footer footer footer footer'; */
+}
+
+h3{
+    color: goldenrod;
+}
+
+.box {
+    background-color: #1f2c34;
+    padding: 10px;
+    color: whitesmoke;
+    text-align: center;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+
+}
+
+td {
+    padding: 10px;
+    text-align: right;
+    margin-left: 10px;
+    color: red;
+}
+
+.coti{
+    text-align: right;
+    margin-left: 10px;
+}
+
+.box1 {
+    grid-area: header;
+}
+
+.box2 {
+    grid-area: izq;
+}
+
+.box3 {
+    grid-area: main;
+}
+
+.box4 {
+    grid-area: footer;
+}
+
+.box5 {
+    grid-area: publi;
+}
