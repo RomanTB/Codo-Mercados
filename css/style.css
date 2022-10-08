@@ -1,0 +1,95 @@
+body {
+    background-color: black;
+}
+.contenedor {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'dolar noti noti'
+        'bcer letr crpt'
+        'lcer bdl usa'
+        'footer footer footer';
+    gap: 2px;
+    background-color: gray;
+    padding: 10px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr;
+    background-color: black;
+}
+
+h3{
+    color: goldenrod;
+}
+
+.box {
+    background-color: #1f2c34;
+    padding: 10px;
+    color: whitesmoke;
+    text-align: center;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+
+}
+
+td {
+    padding: 10px;
+    text-align: right;
+    margin-left: 10px;
+    color: red;
+}
+
+
+.header {
+    grid-area: header;
+    font-size: 100px;
+    text-align: center;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.noticias {
+    grid-area: noti;
+}
+
+.bonoscer {
+    grid-area: bcer;
+}
+
+.letras {
+    grid-area: letr;
+}
+
+.dolar {
+    grid-area: dolar;
+}
+
+.lcer {
+    grid-area: lcer;
+}
+
+.crpt {
+    grid-area: crpt;
+}
+
+.usa {
+    grid-area: usa;
+}
+
+.bdl {
+    grid-area: bdl;
+}
+
+.footer {
+    grid-area: footer;
+}
