@@ -1,79 +1,46 @@
-body {
-    background-color: black;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+  }
+
+nav {
+    width: 100%;
+    height: 100px;
+    border: green 2px solid;
+    margin-bottom: 10px;
 }
-.contenedor {
+.grid-container {
     display: grid;
-    /* grid-template-columns: 100px 100px 100px; la cantidad de valores determina la cantidad de columnas*/
-    /* grid-template-columns: 25% 25% 25% 25%; */
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    /* fr significa fracciones */
-    /* grid-template-columns: 3fr 6fr 3fr; */
-    grid-template-columns: repeat(3, 1fr); /*repetime 1fr por 3 */
-    /* grid-template-rows: 3fr 2fr 3fr; */
-    grid-auto-rows: 1fr; /*que hacer cuando se agregan filas nuevas */
-    /* column-gap: 2px;
-    row-gap: 2px; */
-    gap: 2px;
-    align-content: space-between;
-    justify-content: space-evenly;
-    /* grid-template-areas:
-    'header header header header'
-    'izq main main main'
-    'izq main main main'
-    'publi main main main'
-    'footer footer footer footer'; */
-}
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 5px;
 
-h3{
-    color: goldenrod;
-}
-
-.box {
-    background-color: #1f2c34;
-    padding: 10px;
-    color: whitesmoke;
+  }
+  
+  .grid-item1 {
+    background: blue;
     text-align: center;
-    border-color: black;
-    border-width: 2px;
-    border-style: solid;
-}
-
-table {
-    border-collapse: collapse;
+    border: black 5px solid;
+    grid-column-start: 1; 
+    grid-column-end: 5; 
+    grid-row-start: 1; 
+    grid-row-end: 3;
+  }
+  
+  .grid-item2 {
+    background: grey;
     text-align: center;
-    border-style: solid;
-    border-color: black;
+    border: black 5px solid;
+  }
 
-}
+  footer{
+    width: 95%;
+    height: 100px;
+    border: black 2px solid;
+  }
 
-td {
-    padding: 10px;
-    text-align: right;
-    margin-left: 10px;
-    color: red;
-}
-
-.coti{
-    text-align: right;
-    margin-left: 10px;
-}
-
-.box1 {
-    grid-area: header;
-}
-
-.box2 {
-    grid-area: izq;
-}
-
-.box3 {
-    grid-area: main;
-}
-
-.box4 {
-    grid-area: footer;
-}
-
-.box5 {
-    grid-area: publi;
-}
+  
