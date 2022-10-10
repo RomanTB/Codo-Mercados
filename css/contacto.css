@@ -5,10 +5,9 @@ body {
     display: grid;
     grid-template-areas:
         'header header header'
-        'carrusel carrusel carrusel'
-        'dolar noti noti'
-        'bcer letr crpt'
-        'lcer bdl usa'
+        'contacto contacto noti'
+        'contacto contacto noti'
+        'contacto contacto noti'
         'footer footer footer';
     gap: 2px;
     background-color: gray;
@@ -63,45 +62,11 @@ td {
     grid-area: noti;
 }
 
-.bonoscer {
-    grid-area: bcer;
-}
-
-.letras {
-    grid-area: letr;
-}
-
-.dolar {
-    grid-area: dolar;
-}
-
-.lcer {
-    grid-area: lcer;
-}
-
-.crpt {
-    grid-area: crpt;
-}
-
-.usa {
-    grid-area: usa;
-}
-
-.bdl {
-    grid-area: bdl;
-}
-
 .footer {
     grid-area: footer;
 }
 
-.carrusel{
-    grid-area: carrusel;
+.contacto {
+    grid-area: contacto;
 }
 
-a {
-    font-size: 20px;
-    position: relative;
-    left: 0px;
-    right: 0px;
-}
