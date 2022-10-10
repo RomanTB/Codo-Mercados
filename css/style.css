@@ -5,6 +5,7 @@ body {
     display: grid;
     grid-template-areas:
         'header header header'
+        'carrusel carrusel carrusel'
         'dolar noti noti'
         'bcer letr crpt'
         'lcer bdl usa'
@@ -12,7 +13,7 @@ body {
     gap: 2px;
     background-color: gray;
     padding: 10px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 2fr 2fr 2fr;
     background-color: black;
 }
@@ -92,4 +93,8 @@ td {
 
 .footer {
     grid-area: footer;
+}
+
+.carrusel{
+    grid-area: carrusel;
 }
