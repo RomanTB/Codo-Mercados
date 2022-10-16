@@ -24,33 +24,32 @@
             <h1 class="titulo-form">Envianos un mensaje</h1>
             <p class="texto-form">Envianos una duda o sugerencia</p>
             <div class="formulario">
-                <form action="" method="get" target="" >
+                <form name="fvalida" >
                     <label for="nombreapellido">Nombre y Apellido</label>
-                    <input type="text" id="nombreapellido" class="input-padron" placeholder="Ingrese su nombre y apellido" required>
+                    <input type="text" id="nombreapellido" class="input-padron" placeholder="Ingrese su nombre y apellido" name="nombreCompleto">
 
                     <label for="correoelectronico">Correo Electrónico</label>
-                    <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+                    <input type="email" id="correoelectronico" class="input-padron"  placeholder="email@dominio.com" name="email">
 
                     <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+                    <input type="tel" id="telefono" class="input-padron"  name="telefono" placeholder="(XX) XXXX XXXX">
 
                     <label for="mensaje">Mensaje</label>
-                    <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+                    <textarea cols="70" rows="10" id="mensaje" class="input-padron" name="mensaje" ></textarea>
                     
-                    <label class="checkbox"><input type="checkbox" checked> ¿Le gustaría recibir novedades?</label>  
+                    <label class="checkbox"><input type="checkbox" name="novedades" > ¿Le gustaría recibir novedades?</label>  
 
                     <fieldset>
                         <legend>De ¿qué ámbito quisiera recibir información?</legend>
 
-                        <label for="radio-dolar"><input type="checkbox" name="informacion" value="dolar" id="radio-dolar">Dolar</label>
+                        <label for="check-dolar"><input type="checkbox" name="ambitoDolar" value="dolar" id="check-dolar">Dolar</label>
                         
-                        <label for="radio-cripto"><input type="checkbox" name="informacion" value="cripto" id="radio-dripto">Cripto</label>
+                        <label for="check-cripto"><input type="checkbox" name="ambitoCripto" value="cripto" id="check-dripto">Cripto</label>
                         
-                        <label for="radio-bolsa"><input type="checkbox" name="informacion" value="bolsa" id="radio-bolsa" checked>Bolsa</label>
+                        <label for="check-bolsa"><input type="checkbox" name="ambitoBolsa" value="bolsa" id="check-bolsa" >Bolsa</label>
                         
                     </fieldset>
-                    
-                    <input type="submit" value="Enviar formulario" class="enviar" onclick="obtenerValor()">
+                    <input type="button" value="Enviar" class="enviar" onclick="valida_envia()">
                     <input type="reset" value="Borrar">
 
                 </form>
