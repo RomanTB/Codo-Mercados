@@ -1,31 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grid</title>
-    <link rel="stylesheet" href="css/grid.css">
-</head>
-<header>
-    <nav>
-        <span>Lorem ipsum dolor sit amet.</span>
-    </nav>
-</header>
-<body>
-    <div class="grid-container">
-        <div class="grid-item1">
-            
-        </div>
-        <div class="grid-item2">2</div>
-        <div class="grid-item2">3</div>
-        <div class="grid-item2">4</div>
-        <div class="grid-item2">5</div>
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/carrusel.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="box header">
+        <h1>Trading Codo a Codo</h1>
+        <nav class="nav-header">
+          <a href="index.html">Inicio</a>
+          <a href="paginas/noticias.html">Noticias</a>
+          <a href="paginas/contacto.html">Contacto</a>
+        </nav>
       </div>
-</body>
-<footer>
-    <span>Lorem ipsum dolor sit amet consectetur.
-    </span>
-</footer>
+      <div class="carrusel">
+        <div class="galery">
+          <span class="dolar1" style="--i: 1">
+            <h3>DOLAR</h3>
+            <ul>
+              <li>Oficial</li>
+              <li>Mayorista</li>
+              <li>CCL - GD30</li>
+              <li>MEP - AL30</li>
+            </ul>
+          </span>
+          <span style="--i: 2">
+            <img src="img/2.jfif" alt="" />
+          </span>
+          <span style="--i: 3">
+            <img src="img/3.jfif" alt="" />
+          </span>
+          <span style="--i: 4">
+            <img src="img/4.jfif" alt="" />
+          </span>
+          <span style="--i: 5">
+            <img src="img/5.jfif" alt="" />
+          </span>
+          <span style="--i: 6">
+            <img src="img/6.jfif" alt="" />
+          </span>
+          <span style="--i: 7">
+            <img src="img/7.jfif" alt="" />
+          </span>
+          <span style="--i: 8">
+            <img src="img/8.jfif" alt="" />
+          </span>
+        </div>
+      </div>
+      <div class="box dolar" id="DOLAR">
+        <h3>DOLAR</h3>
+        <ul>
+          <li>Oficial</li>
+          <li>Mayorista</li>
+          <li>CCL - GD30</li>
+          <li>MEP - AL30</li>
+        </ul>
+      </div>
+      <div class="box noticias" id="NOTICIAS">
+        <h3>NOTICIAS</h3>
+        <!-- <ul>
+          <!--pueder ser links
+          <li>Noticia 1</li>
+          <li>Noticia 2</li>
+          <li>Noticia 3</li>
+          <li>Noticia 4</li>
+        </ul> -->
+        <nav class="nav-noticias">
+          <a href=".">Option 1</a>
+          <a href=".">Option 2</a>
+          <a href=".">Option 3</a>
+          <a href=".">Option 4</a>
+        </nav>
+      </div>
+      <div class="box bonoscer" id="BONOS CER">
+        <h3>BONOS CER</h3>
+        <ul>
+          <li>T2X2</li>
+          <li>T2X3</li>
+          <li>TX23</li>
+          <li>TX24</li>
+        </ul>
+      </div>
+
+      <div class="box lcer">
+        <h3>LETRAS CER</h3>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+      </div>
+      <div class="box crpt">
+        <h3>CRIPTO</h3>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+      </div>
+      <div class="box usa">
+        <h3>MERCADO USA</h3>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+      </div>
+      <div class="box bdl">
+        <h3>BONOS DOLARES</h3>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+      </div>
+      <div class="box footer">
+        Agente de Liquidación y Compensación y Agente de Negociación Propio CNV
+        Nº 332 Agente de mercados BYMA, ROFEX y MAV
+      </div>
+    </div>
+  </body>
 </html>
