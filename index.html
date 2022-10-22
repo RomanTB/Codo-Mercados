@@ -1,115 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRADING Codo a Codo</title>
+    <link rel="shortcut icon" href="imagenes/dede.png" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/carrusel.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trading Codo a Codo</title>
-    <link rel="stylesheet" href="css\style.css">
-</head>
+    <script type="text/javascript">
+      // determina el numero de pixeles que se moveran las noticias para
+      // cada iteracion en milisegundos de "speedjump"
+      var scrollspeed = 1
+      // determina la velocidad en milisgundos
+      var speedjump = 30
+      // segundos antes de empezar el movimiento
+      var startdelay = 1
+      // posicion inicial superior en pixeles para cuando inicia
+      var topspace = -10
+      // altura del marco donde se mostraran las noticias
+      // Si se modifica la altura del contenedor de las noticas hay que
+      // modificar tambien este valor
+      var frameheight = 270
 
-<body>
+      // variable temporal que variara su valor en función de si estan las
+      // noticias en movimiento o paradas
+      current = scrollspeed
+
+      /**
+       * Inicio del scroll
+       * Esta función es llamada en el body de la pagina.
+       * Tiene que recibir el id del scroll
+       */
+      function scrollStart() {
+        dataobj = document.getElementById('scroll')
+        // cogemos la altura maxima de la capa de las noticias
+        alturaNoticias = dataobj.offsetHeight
+        // posicionamos la capa del scroll en su posicion inicial
+        dataobj.style.top = topspace + 'px'
+
+        setTimeout('scrolling()', startdelay * 1000)
+      }
+
+      /**
+       * Funcion que realiza el movimiento
+       */
+      function scrolling() {
+        // Restamos a la propiedad top de la capa el valor en pixeles
+        // establecido en la variable "scrollspeed", para hacer el
+        // movimiento hacia arriba.
+        dataobj.style.top = parseInt(dataobj.style.top) - scrollspeed + 'px'
+        // Si la capa ha sobrepasado la altura del area por donde se muestran
+        // las noticias ("alturaNoticias")
+        if (parseInt(dataobj.style.top) < alturaNoticias * -1) {
+          // Posicionamos la capa en la parte inferior del recuadro, para
+          // que simule que vienen las noticias de la parte inferior
+          dataobj.style.top = frameheight + 'px'
+          setTimeout('scrolling()', 0)
+        } else {
+          setTimeout('scrolling()', speedjump)
+        }
+      }
+    </script>
+  </head>
+  <body onLoad="scrollStart();">
     <div class="contenedor">
-        <div class="box header">
-            <font color="#7792a7">Trading </font> Codo a Codo <br>
-            <a href="contacto.html">Contacto</a>
-        </div>
-        <div class="box carrusel">
-            <div class="galery">
-                <span style="--i:1" >
-                  <img src="img/1.jfif" alt="">
-                </span>
-                <span style="--i:2" >
-                  <img src="img/2.jfif" alt="">
-                </span>
-                <span style="--i:3" >
-                  <img src="img/3.jfif" alt="">
-                </span>
-                <span style="--i:4" >
-                  <img src="img/4.jfif" alt="">
-                </span>
-                <span style="--i:5" >
-                  <img src="img/5.jfif" alt="">
-                </span>
-                <span style="--i:6" >
-                  <img src="img/6.jfif" alt="">
-                </span>
-                <span style="--i:7" >
-                  <img src="img/7.jfif" alt="">
-                </span>
-                <span style="--i:8" >
-                  <img src="img/8.jfif" alt="">
-                </span>
-
-                <link rel="stylesheet" href="css/carrusel.css">
-              </div>
-        </div>
-        <div class="box dolar" id="DOLAR">
-            <H3>DOLAR</H3>
+      <div class="box header">
+        <img src="imagenes/Gráfico.png" alt="" />
+        <h1>TRADING Codo a Codo</h1>
+        <nav class="nav-header">
+          <a href="index.html">Inicio</a>
+          <a href="paginas/noticias.html">Noticias</a>
+          <a href="paginas/contacto.html">Contacto</a>
+        </nav>
+      </div>
+      <div class="carrusel">
+        <div class="galery">
+          <span class="dolar1" style="--i: 1">
+            <h3>DOLAR</h3>
             <ul>
-                <li>Oficial</li>
-                <li>Mayorista</li>
-                <li>CCL - GD30</li>
-                <li>MEP - AL30</li>
+              <li>Oficial</li>
+              <li>Mayorista</li>
+              <li>CCL - GD30</li>
+              <li>MEP - AL30</li>
             </ul>
+          </span>
+          <span style="--i: 2">
+            <img src="img/2.jfif" alt="" />
+          </span>
+          <span style="--i: 3">
+            <img src="img/3.jfif" alt="" />
+          </span>
+          <span style="--i: 4">
+            <img src="img/4.jfif" alt="" />
+          </span>
+          <span style="--i: 5">
+            <img src="img/5.jfif" alt="" />
+          </span>
+          <span style="--i: 6">
+            <img src="img/6.jfif" alt="" />
+          </span>
+          <span style="--i: 7">
+            <img src="img/7.jfif" alt="" />
+          </span>
+          <span style="--i: 8">
+            <img src="img/8.jfif" alt="" />
+          </span>
         </div>
-        <div class="box noticias" id="NOTICIAS">
-            <H3>NOTICIAS</H3>
-            <ul>
-                <!--pueder ser links -->
-                <li>Noticia 1</li>
-                <li>Noticia 2</li>
-                <li>Noticia 3</li>
-                <li>Noticia 4</li>
-            </ul>
-        </div>
-        <div class="box bonoscer" id="BONOS CER">
-            <H3>BONOS CER</H3>
-            <ul>
-                <li>T2X2</li>
-                <li>T2X3</li>
-                <li>TX23</li>
-                <li>TX24</li>
-            </ul>
-        </div>
-        <div class="box letras" id="LETRAS">
-            <H3>LETRAS</H3>
-            <table>
-                <tr>
-                    <td>S30S2</td>
-                    <td class="coti" style="color: red">$95</td>
-                </tr>
-                <tr>
-                    <td>S30N2</td>
-                    <td class="coti">$93</td>
-                </tr>
-                <tr>
-                    <td>S30D2</td>
-                    <td class="coti" style="color: green">$92</td>
-                </tr>
-                <tr>
-                    <td>S31E3</td>
-                    <td class="coti">$91</td>
-                </tr>
-            </table>
+      </div>
+      <div class="box dolar" id="DOLAR">
+        <h3>DOLAR</h3>
+        <ul>
+          <li>Oficial</li>
+          <li>Mayorista</li>
+          <li>CCL - GD30</li>
+          <li>MEP - AL30</li>
+        </ul>
+      </div>
+      <div class="box map">
+        <h3>HEAT MAP</h3>
+        <div class="coin360">
+          <iframe
+            src="https://coin360.com/widget/map?utm_source=embed_map"
+            frameborder="0"
+            title="Coin360.com: Cryptocurrency Market State"
+            width="100%"
+            height="100%"
+          ></iframe>
         </div>
 
-        <div class="box lcer">
-            <H3>LETRAS CER</H3>
+      </div>
+      <div class="box bonoscer" id="BONOS CER">
+        <h3>BONOS CER</h3>
+        <ul>
+          <li>T2X2</li>
+          <li>T2X3</li>
+          <li>TX23</li>
+          <li>TX24</li>
+        </ul>
+      </div>
+      <div class="box lcer">
+        <h3>LETRAS CER</h3>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+      </div>
+      <div class="box crpt">
+        <h3>CRIPTO</h3>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+      </div>
+      <div class="box usa">
+        <h3>MERCADO USA</h3>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+      </div>
+      <div class="box bdl">
+        <h3>BONOS DOLARES</h3>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+      </div>
+      <div class="box noticias">
+        <h3>NOTICIAS</h3>
+        <div
+          class="scrollWrapper"
+          onMouseover="scrollspeed=0"
+          onMouseout="scrollspeed=current"
+        >
+          <div id="scroll">
+            <div class="title">
+              <a
+                href="https://www.cronista.com/finanzas-mercados/dolar-blue-hoy-a-cuanto-cotiza-este-sabado-22-de-octubre-con-el-dolar-ccl-y-mep/"
+                target="_blank"
+                >Dólar blue hoy: a cuánto cotiza este sábado 22 de octubre con
+                el dólar CCL y MEP</a
+              >
+            </div>
+            <div class="content">
+              El dólar paralelo mantuvo operaciones ambivalentes durante la
+              semana con tres a la suba y dos con bajas. En el total de las
+              variaciones finalizó $ 1 por arriba de la cotización del último
+              viernes. La brecha con el oficial quedó en el 89%.
+              <a
+                href="https://www.cronista.com/finanzas-mercados/dolar-blue-hoy-a-cuanto-cotiza-este-sabado-22-de-octubre-con-el-dolar-ccl-y-mep/"
+                target="_top"
+                ><img
+                  class:img-noti
+                  src="imagenes/noticia2.jpg"
+                  alt=""
+                  height="100px"
+                  width="150px"
+              /></a>
+            </div>
+
+            <div class="title">
+              <a
+                href="https://www.cronista.com/finanzas-mercados/dolar-blue-hoy-a-cuanto-cotiza-este-sabado-22-de-octubre-con-el-dolar-ccl-y-mep/"
+                target="_blank"
+                >Dólar blue hoy: a cuánto cotiza este sábado 22 de octubre con
+                el dólar CCL y MEP</a
+              >
+            </div>
+            <div class="content">
+              El dólar paralelo mantuvo operaciones ambivalentes durante la
+              semana con tres a la suba y dos con bajas. En el total de las
+              variaciones finalizó $ 1 por arriba de la cotización del último
+              viernes. La brecha con el oficial quedó en el 89%.
+              <a
+                href="https://www.cronista.com/finanzas-mercados/dolar-blue-hoy-a-cuanto-cotiza-este-sabado-22-de-octubre-con-el-dolar-ccl-y-mep/"
+                target="_top"
+                ><img
+                  class:img-noti
+                  src="imagenes/noticia2.jpg"
+                  alt=""
+                  height="100px"
+                  width="150px"
+              /></a>
+            </div>
+
+            <div class="title">
+              <a
+                href="https://www.cronista.com/finanzas-mercados/dolar-blue-hoy-a-cuanto-cotiza-este-sabado-22-de-octubre-con-el-dolar-ccl-y-mep/"
+                target="_blank"
+                >Dólar blue hoy: a cuánto cotiza este sábado 22 de octubre con
+                el dólar CCL y MEP</a
+              >
+            </div>
+            <div class="content">
+              El dólar paralelo mantuvo operaciones ambivalentes durante la
+              semana con tres a la suba y dos con bajas. En el total de las
+              variaciones finalizó $ 1 por arriba de la cotización del último
+              viernes. La brecha con el oficial quedó en el 89%.
+              <a
+                href="https://www.cronista.com/finanzas-mercados/dolar-blue-hoy-a-cuanto-cotiza-este-sabado-22-de-octubre-con-el-dolar-ccl-y-mep/"
+                target="_top"
+                ><img
+                  class:img-noti
+                  src="imagenes/noticia2.jpg"
+                  alt=""
+                  height="100px"
+                  width="150px"
+              /></a>
+            </div>
+          </div>
         </div>
-        <div class="box crpt">
-            <H3>CRIPTO</H3>
-        </div>
-        <div class="box usa">
-            <H3>MERCADO USA</H3>
-        </div>
-        <div class="box bdl">
-            <H3>BONOS DOLARES</H3>
-        </div>
-        <div class="box footer">Agente de Liquidación y Compensación y Agente de Negociación Propio CNV Nº 332
-            Agente de mercados BYMA, ROFEX y MAV</div>
+      </div>
+      <div class="box footer">
+        Agente de Liquidación y Compensación y Agente de Negociación Propio CNV
+        Nº 332 Agente de mercados BYMA, ROFEX y MAV
+      </div>
+      <script src="mktstack.js"></script>
     </div>
-</body>
-
+  </body>
 </html>
