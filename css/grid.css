@@ -197,3 +197,19 @@ font-weight: bold;
 margin-top: 20px;
 margin-bottom: 20px;
 }
+
+ul {
+  font-size: 2rem;
+  position: relative;
+  left: 0px;
+  right: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  justify-content: center;
+  margin: 0 auto;
+}

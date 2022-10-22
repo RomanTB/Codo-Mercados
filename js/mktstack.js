@@ -63,8 +63,8 @@ function consumoToHTML(tickers) {
                 consumo_data.push([`${sub_consumo[0].symbol}`, `${sub_consumo[0].close}`]);
 
 
-                document.getElementById("consumo").innerHTML = /*HTML*/
-                    `<H3>Actividad General</H3>
+                document.getElementById("DOLAR").innerHTML = /*HTML*/
+                    `<H3>Tecnológicas</H3>
                     <table style="border-spacing: 1rem;">
                     <tr>
                     <td>${consumo_data[0][0]}</td>
@@ -101,4 +101,4 @@ function consumoToHTML(tickers) {
     }
 };
 
-setTimeout(consumoToHTML(consumo), 0);
+setTimeout(consumoToHTML(tecno), 0);
