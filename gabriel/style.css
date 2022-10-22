@@ -1,5 +1,10 @@
 body{
-    font-family: 'Montserrat', sans-serif;
+     
+    background-color: black;
+    min-height: 100vh;
+    font-family:'Courgette', cursive, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    
 }
 
 .caja{
@@ -49,6 +54,10 @@ footer{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    background-color: #1f2c34;
+    padding: 10px;
+    color: whitesmoke;
+    border-radius: 10px;
 }
 
 form{
