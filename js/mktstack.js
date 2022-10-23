@@ -94,7 +94,7 @@ function consumoToHTML(tickers) {
             i=-1;
             document.getElementById("DOLAR").innerHTML = /*HTML*/
                 `<H3>Actividad General</H3>
-                <table style="border-spacing: 1rem;">
+                <table style="border-spacing: 2rem;">
                 <tr>
                 <td>${consumo_info.data[i+1].symbol}</td>
                 <td>${consumo_info.data[i+1].close}</td>
@@ -120,7 +120,7 @@ function consumoToHTML(tickers) {
                     i+=5;
             document.getElementById("BONOS CER").innerHTML = /*HTML*/
                 `<H3>Tecnologicas</H3>
-                <table style="border-spacing: 1rem;">
+                <table style="border-spacing: 2rem;">
                 <tr>
                 <td>${tickers[i+2][0]}</td>
                 <td>${consumo_info.data[i+1].close}</td>
@@ -146,7 +146,7 @@ function consumoToHTML(tickers) {
                         i+=5;
                         document.getElementById("financieros").innerHTML = /*HTML*/
                         `<H3>Sector Financiero</H3>
-                        <table style="border-spacing: 1rem;">
+                        <table style="border-spacing: 2rem;">
                         <tr>
                         <td>${tickers[i+2][0]}</td>
                         <td>${consumo_info.data[i+1].close}</td>
@@ -172,7 +172,7 @@ function consumoToHTML(tickers) {
                                 i+=5;
                                 document.getElementById("paises").innerHTML = /*HTML*/
                                 `<H3>Emergentes</H3>
-                                <table style="border-spacing: 1rem;">
+                                <table style="border-spacing: 2rem;">
                                 <tr>
                                 <td>${tickers[i+2][0]}</td>
                                 <td>${consumo_info.data[i+1].close}</td>
@@ -198,7 +198,7 @@ function consumoToHTML(tickers) {
                                         i+=5;
                                         document.getElementById("asia").innerHTML = /*HTML*/
                                         `<H3>Asia</H3>
-                                        <table style="border-spacing: 1rem;">
+                                        <table style="border-spacing: 2rem;">
                                         <tr>
                                         <td>${tickers[i+2][0]}</td>
                                         <td>${consumo_info.data[i+1].close}</td>
@@ -224,7 +224,7 @@ function consumoToHTML(tickers) {
                                                 i+=5;
                                                 document.getElementById("europa").innerHTML = /*HTML*/
                                                 `<H3>Europa</H3>
-                                                <table style="border-spacing: 1rem;">
+                                                <table style="border-spacing: 2rem;">
                                                 <tr>
                                                 <td>${tickers[i+2][0]}</td>
                                                 <td>${consumo_info.data[i+1].close}</td>
