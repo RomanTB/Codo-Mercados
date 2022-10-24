@@ -61,7 +61,7 @@ h3{
 .box table{
   margin: 0 auto;
   text-align: left;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .box table td{
@@ -173,7 +173,7 @@ ul {
 }
 .coin360 {
   margin-top: 10px;
-  height: 90%;
+  height: 95%;
 }
 
 .bonoscer {
@@ -206,6 +206,19 @@ ul {
   display: grid;
 }
 
+.footer a img{
+  display: block;
+  max-width: 15%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+.footer a{
+  margin: 0 40px 0 0;
+
+}
+
 /* Scroll ---------------------------------------------------- */
 
 .scrollWrapper {
@@ -229,4 +242,117 @@ ul {
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+/* Paginas Noticias ----------------------------------------------------------------*/
+
+/* Pagina Contacto --------------------------------------------------------------------- */
+header nav{
+  position: absolute;
+  right: 0;
+}
+
+.footer nav li{
+  display: inline;
+  margin: 0 12px 0 10px;
+}
+
+.footer nav a{
+  text-transform: uppercase;
+  color: #a2a2a2;
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer nav a:hover{
+  color: #c78c19;
+  text-decoration: underline;
+}
+.formulario{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: #1f2c34;
+  padding: 10px;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+
+form{
+  margin: 40px 0;
+  align-items: center;
+  padding: auto;
+}
+.titulo-form, .texto-form{
+  text-align: center ;
+  font-family:'Courgette', cursive, Arial, Helvetica, sans-serif;
+  color: rgb(120, 120, 120);
+}
+
+.titulo-form{
+  font-size: 200%;
+  
+}
+.texto-form{
+  font-size: 120%;
+}
+form label, form legend{
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.input-padron{
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
+}
+
+.checkbox{
+  margin:20px 0;
+}
+
+.enviar{
+  width: 40%;
+  padding: 10px 0;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color:white;
+  background: rgb(70, 24, 251);
+  border:none;
+  border-radius: 5px;
+  transition: 1s all;
+  cursor:pointer;
+}
+
+.enviar:hover{
+  background: rgb(119, 106, 232);
+  transform: scale(1.12);
+}
+
+footer{
+  text-align: center;
+  background: #354a57;
+  padding:40px;
+}
+footer a img{
+  display: block;
+  max-width: 15%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+footer a{
+  margin: 0 40px 0 0;
+
+}
+
+.copyright{
+  color:#FFFFFF;
+  font-size: 13px;
+  margin:0 8% 0 8%;
 }
