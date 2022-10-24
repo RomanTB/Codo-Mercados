@@ -98,27 +98,34 @@ form label, form legend{
 /* style para el footer */
 
 footer{
-    text-align: center;
     background: #354a57;
     padding:40px;
 }
 a img{
-    display: block;
+    position: absolute;
     max-width: 15%;
     height: auto;
-    margin-right: auto;
-    margin-left: auto;
+    left: 4%;
+    margin: -2% 0% 4% 3%;
 
+}
+.linkHome{
+    margin: 0%;
+
+}
+footer nav{
+    text-align: right;
 }
 footer a{
     margin: 0 40px 0 0;
-
+    font-size: 24px;
 }
 
 .copyright{
     color:#FFFFFF;
     font-size: 13px;
-    margin:0 8% 0 8%;
+    margin:0 8% -2% 8%;
+    text-align: center;
 }
 
 
