@@ -70,8 +70,8 @@ function consumoToHTML(tickers) {
 
         document.getElementById('DOLAR').innerHTML =
           /*HTML*/
-          `<H3>Tecnológicas</H3>
-                    <table style="border-spacing: 1rem;">
+          `<h3>TECNOLOGICAS</h3>
+                    <table style="border-spacing: 1.5rem;">
                     <tr>
                     <td>${consumo_data[0][0]}</td>
                     <td>${consumo_data[0][1]}</td>

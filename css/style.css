@@ -58,11 +58,14 @@ h3{
     border-radius: 10px;
 }
 
-.box a, ul {
+.box table{
+  margin: 0 auto;
+  text-align: left;
   font-size: 2rem;
-  position: relative;
-  left: 0px;
-  right: 0px;
+}
+
+.box table td{
+  padding: 5px 20px;
 }
 
 ul {
