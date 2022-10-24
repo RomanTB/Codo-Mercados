@@ -102,7 +102,7 @@ footer{
     background: #354a57;
     padding:40px;
 }
-footer img{
+a img{
     display: block;
     max-width: 15%;
     height: auto;
@@ -118,7 +118,7 @@ footer a{
 .copyright{
     color:#FFFFFF;
     font-size: 13px;
-    margin:20px;
+    margin:0 8% 0 8%;
 }
 
 
