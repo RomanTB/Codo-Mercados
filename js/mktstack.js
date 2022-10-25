@@ -296,7 +296,7 @@ setTimeout(consumoToHTML(consumo), 0)
 
 <<<<<<< HEAD
 =======
-// setTimeout(consumoToHTML(tecno), 0)
+setTimeout(consumoToHTML(tecno), 0)
 
 >>>>>>> 9a70e24c298a129ab133e2d90e203272fdf0d2ec
 // determina el numero de pixeles que se moveran las noticias para
