@@ -12,64 +12,78 @@
         <script src="https://kit.fontawesome.com/05b5c6a133.js" crossorigin="anonymous"></script>
         <script src="script.js"></script>
     </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                        
-                </ul>
-            </nav>
-        </header>
-        <main >
-            <h1 class="titulo-form">Envianos un mensaje</h1>
-            <p class="texto-form">Envianos una duda o sugerencia</p>
-            <div class="formulario">
-                <form name="fvalida" >
-                    <label for="nombreapellido">Nombre y Apellido</label>
-                    <input type="text" id="nombreapellido" class="input-padron" placeholder="Ingrese su nombre y apellido" name="nombreCompleto">
-
-                    <label for="correoelectronico">Correo Electrónico</label>
-                    <input type="email" id="correoelectronico" class="input-padron"  placeholder="email@dominio.com" name="email">
-
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" class="input-padron"  name="telefono" placeholder="(XX) XXXX XXXX">
-
-                    <label for="mensaje">Mensaje</label>
-                    <textarea cols="70" rows="10" id="mensaje" class="input-padron" name="mensaje" ></textarea>
-                    
-                    <label class="checkbox"><input type="checkbox" name="novedades" > ¿Le gustaría recibir novedades?</label>  
-
-                    <fieldset>
-                        <legend>De ¿qué ámbito quisiera recibir información?</legend>
-
-                        <label for="check-dolar"><input type="checkbox" name="ambitoDolar" value="dolar" id="check-dolar">Dolar</label>
-                        
-                        <label for="check-cripto"><input type="checkbox" name="ambitoCripto" value="cripto" id="check-dripto">Cripto</label>
-                        
-                        <label for="check-bolsa"><input type="checkbox" name="ambitoBolsa" value="bolsa" id="check-bolsa" >Bolsa</label>
-                        
-                    </fieldset>
-                    <input type="button" value="Enviar" class="enviar" onclick="valida_envia()">
-                    <input type="reset" value="Borrar">
-
-                </form>
+    <body onLoad="scrollStart();">
+        <div class="contenedor" id="contenedorContacto">
+            <div class="box header">
+                <img src="img/Gráfico.png" alt="Logo de la pagina" />
+                <h1>TRADING Codo a Codo</h1>
+                <nav class="nav-header">
+                    <a href="index.html">Inicio</a>
+                    <a href="noticias.html">Noticias</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
             </div>
-            
-        </main>
-        <footer>
-            <a class="linkHome" href="index.html"><img src="imagenes/logoFooter.png" alt="Logo de la pagina"></a>
-            <nav>
-                <ul>   
-                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-                </ul>
-            </nav>
-            
-            <p class="copyright">Trading Codo a Codo - Copyright ©2022. Agente de Liquidación y Compensación, Agente de mercados y Agente de Negociación Propio. Buenos Aires, Argentina. Todos los derechos reservados. </p>
-            
-        </footer>
+            <div class="box main">
+                <h1 class="titulo-form">Inverti con nosotros</h1>
+                <p class="texto-form">Dejanos tus datos y nuestros asesores se pondran en contacto para ayudarte a maximizar tus inversiones</p>
+                <div class="formulario">
+                    <form name="fvalida" >
+                        <label for="nombreapellido">Nombre y Apellido</label>
+                        <input type="text" id="nombreapellido" class="input-padron" placeholder="Ingrese su nombre y apellido" name="nombreCompleto">
+
+                        <label for="correoelectronico">Correo Electrónico</label>
+                        <input type="email" id="correoelectronico" class="input-padron"  placeholder="email@dominio.com" name="email">
+
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" class="input-padron"  name="telefono" placeholder="(XX) XXXX XXXX">
+
+                        <label for="mensaje">Mensaje</label>
+                        <textarea cols="70" rows="10" id="mensaje" class="input-padron" name="mensaje" ></textarea>
+                        
+                        <label class="checkbox"><input type="checkbox" name="novedades" > ¿Le gustaría recibir asesoramiento financiera?</label>  
+
+                        <fieldset>
+                            <legend>De ¿qué ámbito quisiera recibir información?</legend>
+
+                            <label for="check-dolar"><input type="checkbox" name="ambitoDolar" value="dolar" id="check-dolar">Dolar</label>
+                            
+                            <label for="check-cripto"><input type="checkbox" name="ambitoCripto" value="cripto" id="check-dripto">Cripto</label>
+                            
+                            <label for="check-bolsa"><input type="checkbox" name="ambitoBolsa" value="bolsa" id="check-bolsa" >Bolsa</label>
+                            
+                        </fieldset>
+                        <input type="button" value="Enviar" class="enviar" onclick="valida_envia()">
+                        <input type="reset" value="Borrar">
+                    </form>
+                </div>
+
+            </div>
+          
+            <div class="box footer">
+                <a class="linkHome" href="index.html"><img class="logoFooter" src="imagenes/logoFooter.png" alt="Logo de la pagina"></a>
+                <section class="menuPaginas">
+                    <nav class="navFooter">
+                        <a class="navFooter" href="index.html">Inicio</a>
+                        <a class="navFooter" href="noticias.html">Noticias</a>
+                        <a class="navFooter" href="contacto.html">Contacto</a>
+                    </nav>
+                </section>
+                <section>
+                    <nav class="menuRedes">
+                        <ul>   
+                            <a class="iconosRedes" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                            <a class="iconosRedes" href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                            <a class="iconosRedes" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a class="iconosRedes" href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </ul>
+                    </nav>
+                </section>
+                <p class="copyright">Trading Codo a Codo - Copyright ©2022. Agente de Liquidación y Compensación, Agente de mercados y Agente de Negociación Propio. Buenos Aires, Argentina. Todos los derechos reservados. </p>
+            </div>
+        </div>
     </body>
 </html>
+    
+        
+            
+     

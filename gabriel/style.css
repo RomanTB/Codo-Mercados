@@ -1,135 +1,347 @@
-body{
-     
-    background-color: #1f2c34;
-    min-height: 100vh;
-    font-family:'Courgette', cursive, Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    
+/*GENERAL -------------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
 }
 
-header nav{
-    position: absolute;
-    right: 0;
+body {
+  background-color: black;
+  min-height: 100vh;
+  font-family:'Courgette', cursive, Arial, Helvetica, sans-serif;
+  font-weight: normal;
 }
 
-nav li{
-    display: inline;
-    margin: 0 12px 0 10px;
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: goldenrod;
 }
 
-nav a{
-    text-transform: uppercase;
-    color: #a2a2a2;
-    font-weight: bold;
-    font-size: 24px;
-    text-decoration: none;
+h1 {
+  font-size: 5rem;
 }
 
-nav a:hover{
-    color: #c78c19;
-    text-decoration: underline;
+.contenedor {
+    display: grid;
+    min-width: 99%;;
+	  max-width: 1900px;
+    grid-template-areas:
+        'header header header'
+        'carrusel carrusel carrusel'
+        'dolar crpt map'
+        'bcer usa map'
+        'lcer bdl map'
+        'noti noti noti'
+        'footer footer footer';
+    gap: 1.2rem;
+    padding: 10px;
+    grid-template-rows: repeat(7, auto);
+    grid-template-columns: repeat(3, 1fr);
+    background-color: black;
+    overflow: hidden;
 }
 
+h3{
+    color: goldenrod;
+    font-size: 2rem;
+    border-bottom: 1px solid #A5C9CA;
+}
 
-.formulario{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+.box {
     background-color: #1f2c34;
     padding: 10px;
     color: whitesmoke;
+    text-align: center;
     border-radius: 10px;
 }
 
-form{
-    margin: 40px 0;
-    align-items: center;
-    padding: auto;
-}
-.titulo-form, .texto-form{
-    text-align: center ;
-    font-family:'Courgette', cursive, Arial, Helvetica, sans-serif;
-    color: rgb(120, 120, 120);
+.box table{
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.5rem;
 }
 
-.titulo-form{
-    font-size: 200%;
+.box table td{
+  padding: 5px 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header ------------------------------------------------------------------ */
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: auto;
+  text-align: center;
+}
+
+.header h1 {
+  margin-left: 10rem;
+}
+
+.header img{
+  max-width: 15rem;
+  max-height: 15rem;
+}
+  
+.nav-header a {
+  display: inline-block;
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 10px 20px;
+  line-height: normal;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.nav-header a:hover {
+  background: goldenrod;
+}
+
+/* Carrusel -------------------------------------------------------------------------------*/
+
+.carrusel{
+    display: grid;
+    padding: 10px;
+    margin-top: 40px;
+    grid-area: carrusel;
+    position: relative;
+    justify-content: center;
+}
     
+.galery{
+  position: relative;
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  width: 250px;
+  height: 150px;
+  transform-style: preserve-3d;
+  animation: rotate 35s linear infinite;
+}
+
+@keyframes rotate{
+  from{
+    transform: perspective(1200px) rotateY(0deg);
+  }
+
+  to{
+    transform: perspective(1200px) rotateY(360deg);
+  }
+}
+
+.galery span{
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+}
+
+.galery span img{
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+
+/* BOX ------------------------------------------------------------------------ */
+
+.dolar {
+  grid-area: dolar;
+}
+
+.crpt {
+ grid-area: crpt;
+}
+
+.map {
+  grid-area: map;
+}
+.coin360 {
+  margin-top: 10px;
+  height: 95%;
+}
+
+.bonoscer {
+  grid-area: bcer;
+}
+
+.usa {
+  grid-area: usa;
+}
+
+.lcer {
+  grid-area: lcer;
+}
+
+.bdl {
+  grid-area: bdl;
+}
+
+.noticias {
+  grid-area: noti;
+}
+.content {
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Scroll ---------------------------------------------------- */
+
+.scrollWrapper {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-top: 1rem;
+  font-family: Arial;
+  font-size: 2rem;
+}
+
+#scroll {
+  position: relative;
+  width: auto;
+  margin: 1px;
+  z-index: -1;
+  padding: 5px;
+  z-index: 9999999;
+}
+#scroll .title {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Pagina Contacto ---------------------------------------------------------------------*/ 
+#contenedorContacto{
+  grid-template-columns: repeat(1, 1fr);
+} 
+.titulo-form{
+  font-size: 400%;
+  margin-bottom: 2%;
 }
 .texto-form{
-    font-size: 120%;
+  font-size: 200%;
+}
+form{
+  margin: 40px 20% 10px 20%;
 }
 form label, form legend{
-    display: block;
-    font-size: 20px;
-    margin: 0 0 10px;
+  display: block;
+  font-size: 160%;
+  margin: 0 0 10px;
 }
-
 .input-padron{
-    display: block;
-    margin: 0 0 20px;
-    padding: 10px 25px;
-    width: 50%;
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 25px;
+  width: 50%;
+  border-radius: 20px;
 }
-
 .checkbox{
-    margin:20px 0;
+  margin:2% 0;
 }
-
+form fieldset{
+  border-radius: 20px;
+  border-style: inset;
+}
 .enviar{
-    width: 40%;
-    padding: 10px 0;
-    margin: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color:white;
-    background: rgb(70, 24, 251);
-    border:none;
-    border-radius: 5px;
-    transition: 1s all;
-    cursor:pointer;
+  width: 20%;
+  padding: 10px 0;
+  margin: 10px;
+  font-size: 180%;
+  font-weight: bold;
+  color:white;
+  background: rgb(70, 24, 251);
+  border:none;
+  border-radius: 5px;
+  transition: 1s all;
+  cursor:pointer;
 }
 
 .enviar:hover{
-    background: rgb(119, 106, 232);
-    transform: scale(1.12);
+  background: rgb(100, 83, 255);
+  transform: scale(1.12);
 }
+
 
 /* style para el footer */
-
-footer{
-    background: #354a57;
-    padding:40px;
-}
-a img{
-    position: absolute;
-    max-width: 15%;
-    height: auto;
-    left: 4%;
-    margin: -2% 0% 4% 3%;
-
-}
-.linkHome{
-    margin: 0%;
-
-}
-footer nav{
-    text-align: right;
-}
-footer a{
-    margin: 0 40px 0 0;
-    font-size: 24px;
+.footer{
+  margin-top: -4%;
+  padding-bottom: 2%;
+  grid-area: footer;
+  display: grid;
 }
 
+.logoFooter{
+  max-width: 15%;
+  height: auto;
+  position: relative;
+  top: 30px;
+}
+.menuRedes{
+  text-align: right;
+}
+.iconosRedes{
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  color: rgb(72, 117, 255);
+  position: relative;
+  bottom: 20px;
+}
+.iconosRedes:visited {
+  color: rgb(96, 215, 81);
+  background-color: transparent;
+  text-decoration: none;
+}
+.menuPaginas{
+  text-align: left;
+  margin-bottom: -20px;
+}
+.navFooter{
+  text-decoration: none;
+  padding: 10px 20px;
+  line-height: normal;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.navFooter:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+  
+.navFooter:hover {
+  color: rgb(72, 117, 255);
+  background-color: transparent;
+    
+}
+.navFooter:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none
+}
 .copyright{
-    color:#FFFFFF;
-    font-size: 13px;
-    margin:0 8% -2% 8%;
-    text-align: center;
+  font-size: 11px;
+  margin:0 8% -2% 8%;
 }
 
-
-
+/*
 @media screen and (max-width:480px){
     h1{
         text-align: center;
@@ -146,3 +358,4 @@ footer a{
 
 }
 
+*/
