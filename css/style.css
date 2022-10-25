@@ -44,9 +44,13 @@ h1 {
     overflow: hidden;
 }
 
+.dynamic__text {
+  display: none;
+}
+
 h3{
     color: goldenrod;
-    font-size: 2rem;
+    font-size: 2.5em;
     border-bottom: 1px solid #A5C9CA;
 }
 
@@ -61,7 +65,7 @@ h3{
 .box table{
   margin: 0 auto;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 200%;
 }
 
 .box table td{
@@ -160,6 +164,10 @@ ul {
 
 /* BOX ------------------------------------------------------------------------ */
 
+.dynamic__text{
+  grid-area: dynamic__text;
+}
+
 .dolar {
   grid-area: dolar;
 }
@@ -174,6 +182,11 @@ ul {
 .coin360 {
   margin-top: 10px;
   height: 95%;
+}
+
+.coin360-cuadro {
+  width: 100%;
+  height: 100%;
 }
 
 .bonoscer {
@@ -224,9 +237,8 @@ ul {
 .scrollWrapper {
   width: 100%;
   height: 300px;
-  overflow: hidden;
+  overflow:hidden;
   margin-top: 1rem;
-  font-family: Arial;
   font-size: 2rem;
 }
 
@@ -245,6 +257,29 @@ ul {
 }
 
 /* Paginas Noticias ----------------------------------------------------------------*/
+
+.noti-contenedor {
+  display: grid;
+  min-width: 100vw;
+  min-height: 100vh;
+  grid-template-areas:
+      'header header header'
+      'noti noti noti'
+      /* 'noti noti noti'
+      'noti noti noti'
+      'noti noti noti' */
+      'footer footer footer';
+  gap: 1.2rem;
+  padding: 10px;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
+  background-color: black;
+  overflow: hidden;
+}
+
+.noti-contenedor .noticias {
+ margin-top: -80px;
+}
 
 /* Pagina Contacto --------------------------------------------------------------------- */
 header nav{
@@ -355,4 +390,212 @@ footer a{
   color:#FFFFFF;
   font-size: 13px;
   margin:0 8% 0 8%;
+}
+
+/* Responsive --------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .header img{
+    max-width: 13rem;
+    max-height: 13rem;
+  }
+
+  .header h1 {
+    font-size: 4rem;
+    margin-left: 0px;
+  }
+
+  .nav-header a {
+    font-size: 2rem;
+    padding: 10px 10px;
+  }
+
+  .galery {
+    width: 175px;
+    height: 125px;
+  }
+
+  .box h3{
+    font-size: 2.2rem;
+  }
+
+  .box table{
+    font-size: 1.5rem;
+  }
+
+  .galery span{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
+  }
+
+  #scroll {
+    font-size: 1.5rem;
+  }
+
+  .content img{
+    width: 120px;
+    height: 70px;
+    margin-left: 5px;
+  }
+  
+  
+}
+
+@media (max-width: 900px) {
+  .contenedor {
+    grid-template-areas:
+                      'header header'
+                      'carrusel carrusel'
+                      'dolar crpt'
+                      'bcer usa'
+                      'lcer bdl'
+                      'map map'
+                      'map map'
+                      'noti noti'
+                      'footer footer';
+  grid-template-rows: repeat(9, auto);
+  grid-template-columns: repeat(2, 1fr);
+  }
+  .header img{
+    max-width: 10rem;
+    max-height: 10rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+    margin-left: 20px;
+  }
+
+  .nav-header a {
+    font-size: 1.5rem;
+    padding: 10px 5px;
+  }
+
+  .map {
+    height: 400px;
+    padding-bottom: 0;
+  }
+
+  .galery {
+    width: 150px;
+    height: 100px;
+  }
+
+  .coin360 {
+    margin-top: 10px;
+    height: 95%;
+  }
+
+  .coin360-cuadro {
+    width: 100%;
+    height: 90%;
+  }
+
+  .box h3{
+    font-size: 2rem;
+  }
+
+  .box table{
+    font-size: 1.2rem;
+  }
+
+  .galery span{
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(270px);
+  }
+
+  #scroll {
+    font-size: 1.2rem;
+  }
+
+  .content img{
+    width: 100px;
+    height: 50px;
+    margin-left: 5px;
+  }
+  
+  
+}
+
+@media (max-width: 600px) {
+  .dynamic__text {
+    display: grid;
+    align-items: center;
+  }
+  .contenedor {
+    grid-template-areas:
+                      'header header'
+                      'dynamic__text dynamic__text'
+                      'dolar crpt'
+                      'bcer usa'
+                      'lcer bdl'
+                      'map map'
+                      'map map'
+                      'noti noti'
+                      'footer footer';
+  }
+  .carrusel {
+    display:none;
+  }
+  
+  .header img{
+    max-width: 8rem;
+    max-height: 8rem;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+    margin-left: 15px;
+  }
+
+  .nav-header a {
+    font-size: 1.2rem;
+    padding: 10px 5px;
+  }
+   
+  .box h3{
+    font-size: 1.8rem;
+  }
+
+}
+
+.dynamic__text{
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background-color: black;
+  min-height: 40px;
+}
+  .container-rotate{
+    display: flex;
+    justify-content:center;
+    height: 30px;
+    overflow: hidden;
+  }
+.rotate{
+  position: relative;
+  animation: change 10s infinite;
+}
+.rotate-span{
+  display: block;
+  color: goldenrod;
+  margin-left: 5px;
+  text-shadow: 0px 0px 2px rgb($color: #fff, $alpha: .3);
+}
+.static{
+    color: #fff;
+    text-shadow: none;
+    padding-right: 10px;
+ }
+@keyframes change {
+  0%, 5% {top: 0;}
+  10%, 15% {top: -24px;}
+  20%, 25% {top: -50px;}
+  30%, 35% {top: -74px;}
+  40%, 45% {top: -50px;}
+  50%, 55% {top: -24px;}
+  60%, 65% {top: 0px;}
 }

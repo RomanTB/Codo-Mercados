@@ -290,7 +290,7 @@ function consumoToHTML(tickers) {
 
 setTimeout(consumoToHTML(consumo), 0)
 
-setTimeout(consumoToHTML(tecno), 0)
+//setTimeout(consumoToHTML(tecno), 0)//
 
 // determina el numero de pixeles que se moveran las noticias para
 // cada iteracion en milisegundos de "speedjump"
@@ -344,3 +344,5 @@ function scrolling() {
     setTimeout('scrolling()', speedjump)
   }
 }
+
+/*Pagina Noticias - scroll2 -------------------------------------------- */

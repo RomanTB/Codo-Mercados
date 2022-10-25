@@ -14,23 +14,24 @@
     <title>Noticias</title>
   </head>
   <body onLoad="scrollStart();">
-    <div class="box header">
-      <img src="img/Gráfico.png" alt="" />
-      <h1>TRADING Codo a Codo</h1>
-      <nav class="nav-header">
-        <a href="index.html">Inicio</a>
-        <a href="paginas/noticias.html">Noticias</a>
-        <a href="paginas/contacto.html">Contacto</a>
-      </nav>
-    </div>
-    <div class="box noticias">
-      <h3>NOTICIAS</h3>
-      <div
-        class="scrollWrapper"
-        onMouseover="scrollspeed=0"
-        onMouseout="scrollspeed=current"
-      >
-        <div id="scroll">
+    <div class="noti-contenedor">
+      <div class="box header">
+        <img src="img/Gráfico.png" alt="" />
+        <h1>TRADING Codo a Codo</h1>
+        <nav class="nav-header">
+          <a href="index.html">Inicio</a>
+          <a href="#">Noticias</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+      <div class="box noticias">
+        <h3>Noticias</h3>
+        <div
+          class="scrollWrapper2"
+          onMouseover="scrollspeed=0"
+          onMouseout="scrollspeed=current"
+        >
+          <!-- <div id="scroll"> -->
           <div class="title">
             <a
               href="https://www.cronista.com/finanzas-mercados/dolar-blue-hoy-a-cuanto-cotiza-este-sabado-22-de-octubre-con-el-dolar-ccl-y-mep/"
@@ -50,7 +51,7 @@
               ><img
                 class:img-noti
                 src="img/noticia2.jpg"
-                alt=""
+                alt="Imagen de noticia"
                 height="100px"
                 width="150px"
             /></a>
@@ -75,7 +76,7 @@
               ><img
                 class:img-noti
                 src="img/noticia2.jpg"
-                alt=""
+                alt="Imagen de noticia"
                 height="100px"
                 width="150px"
             /></a>
@@ -100,17 +101,18 @@
               ><img
                 class:img-noti
                 src="img/noticia2.jpg"
-                alt=""
+                alt="Imagen de noticia"
                 height="100px"
                 width="150px"
             /></a>
           </div>
         </div>
+        <!-- </div> -->
       </div>
-    </div>
-    <div class="box footer">
-      Agente de Liquidación y Compensación y Agente de Negociación Propio CNV Nº
-      332 Agente de mercados BYMA, ROFEX y MAV
+      <div class="box footer">
+        Agente de Liquidación y Compensación y Agente de Negociación Propio CNV
+        Nº 332 Agente de mercados BYMA, ROFEX y MAV
+      </div>
     </div>
     <script type="text/javascript" src="js/mktstack.js"></script>
   </body>
