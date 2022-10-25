@@ -1,3 +1,4 @@
+
 tecno = [
   ['Apple', 'AAPL'],
   ['Amazon', 'AMZN'],
@@ -94,10 +95,13 @@ function consumoToHTML(tickers) {
       var consumo_info = response.data
       console.log(consumo_info)
 
+
+
       i = -1
       document.getElementById('DOLAR').innerHTML =
         /*HTML*/
         `<H3>Actividad General</H3>
+        <H4>Precio de cierre al 21-10-2022</H4>
                 <table style="border-spacing: 2rem;">
                 <tr>
                 <td>${consumo_info.data[i + 1].symbol}</td>
@@ -290,7 +294,7 @@ function consumoToHTML(tickers) {
 
 setTimeout(consumoToHTML(consumo), 0)
 
-setTimeout(consumoToHTML(tecno), 0)
+// setTimeout(consumoToHTML(tecno), 0)
 
 // determina el numero de pixeles que se moveran las noticias para
 // cada iteracion en milisegundos de "speedjump"
