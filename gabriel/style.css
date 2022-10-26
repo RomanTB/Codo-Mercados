@@ -291,8 +291,7 @@ form fieldset{
 .logoFooter{
   max-width: 15%;
   height: auto;
-  position: relative;
-  top: 30px;
+  margin: 0 auto -25px auto;
 }
 .menuRedes{
   text-align: right;
