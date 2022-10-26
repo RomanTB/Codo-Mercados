@@ -411,6 +411,7 @@ form fieldset{
 }
 
 /* Preguntas Frecuentes ------------------------------------------------ */
+
 .pf-contenedor {
   display: grid;
   min-width: 99%;
@@ -485,6 +486,14 @@ form fieldset{
   
   .iconosRedes {
     font-size: 23px;
+  }
+
+  .titulo-form{
+    font-size: 300%;
+  }
+
+  .texto-form{
+    font-size: 150%;
   }
   
 }
@@ -570,6 +579,11 @@ form fieldset{
   
   .copyright{
     font-size: 1rem;
+  }
+
+  .enviar{
+    width: 15%;
+    font-size: 150%;
   }
 }
 
@@ -664,6 +678,22 @@ form fieldset{
 
   .copyright{
     font-size: 0.8rem;
+  }
+
+  .enviar{
+    font-size: 120%;
+  }
+
+  .checkbox {
+    font-size: 1.5rem;
+  }
+
+  fieldset legend {
+    font-size: 1.2rem;
+  }
+
+  fieldset label {
+    font-size: 1.2rem;
   }
 }
 
