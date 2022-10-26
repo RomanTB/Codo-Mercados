@@ -1,4 +1,3 @@
-
 tecno = [
   ['Apple', 'AAPL'],
   ['Amazon', 'AMZN'],
@@ -94,8 +93,6 @@ function consumoToHTML(tickers) {
     .then(function (response) {
       var consumo_info = response.data
       console.log(consumo_info)
-
-
 
       i = -1
       document.getElementById('DOLAR').innerHTML =
@@ -294,11 +291,6 @@ function consumoToHTML(tickers) {
 
 setTimeout(consumoToHTML(consumo), 0)
 
-<<<<<<< HEAD
-=======
-setTimeout(consumoToHTML(tecno), 0)
-
->>>>>>> 9a70e24c298a129ab133e2d90e203272fdf0d2ec
 // determina el numero de pixeles que se moveran las noticias para
 // cada iteracion en milisegundos de "speedjump"
 var scrollspeed = 1
