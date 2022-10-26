@@ -1,81 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid</title>
-    <link rel="stylesheet" href="grid.css">
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRADING Codo a Codo</title>
+    <link rel="shortcut icon" href="img/logoHeader.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/05b5c6a133.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body onLoad="scrollStart();">
     <div class="contenedor">
-        <div class="box box1">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur inventore, laborum corrupti sequi ab
-                quibusdam ut. Dolorem doloribus est ut, officia, laborum consequuntur, alias voluptates quae aut
-                necessitatibus voluptate ad.</p>
+      <div class="box header">
+        <img src="img/logoHeader.png" alt="" />
+        <h1>TRADING Codo a Codo</h1>
+        <nav class="nav-header">
+          <a href="#">Inicio</a>
+          <a href="noticias.html">Noticias</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="pregfrec.html">FreQ</a>
+        </nav>
+      </div>
+      <div class="dynamic__text">
+        <div class="container-rotate">
+          <span class="static"> Mercados </span>
+          <div class="rotate">
+            <span class="rotate-span">Bonos</span>
+            <span class="rotate-span">Crytomonedas</span>
+            <span class="rotate-span">Noticias</span>
+            <span class="rotate-span">Heat Map</span>
+          </div>
         </div>
-        <div class="box box2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ex doloribus eligendi doloremque
-                recusandae dicta modi obcaecati, cupiditate totam incidunt, saepe numquam voluptatum nulla nemo id
-                voluptatibus possimus laborum! Ab.</p>
+      </div>
+      <div class="carrusel">
+        <div class="galery">
+          <span style="--i: 1">
+            <img src="img/1.jfif" alt="" />
+          </span>
+          <span style="--i: 2">
+            <img src="img/2.jfif" alt="" />
+          </span>
+          <span style="--i: 3">
+            <img src="img/3.jfif" alt="" />
+          </span>
+          <span style="--i: 4">
+            <img src="img/4.jfif" alt="" />
+          </span>
+          <span style="--i: 5">
+            <img src="img/5.jfif" alt="" />
+          </span>
+          <span style="--i: 6">
+            <img src="img/6.jfif" alt="" />
+          </span>
+          <span style="--i: 7">
+            <img src="img/7.jfif" alt="" />
+          </span>
+          <span style="--i: 8">
+            <img src="img/8.jfif" alt="" />
+          </span>
         </div>
-        <div class="box dolar" id="DOLAR">
-            <H3>DOLAR</H3>
+      </div>
+      <div class="box dolar" id="DOLAR"></div>
+      <div class="box map">
+        <h3>Heat Map</h3>
+        <div class="coin360">
+          <iframe
+            class="coin360-cuadro"
+            src="https://coin360.com/widget/map?utm_source=embed_map"
+            frameborder="0"
+            title="Coin360.com: Cryptocurrency Market State"
+          ></iframe>
+        </div>
+      </div>
+      <div class="box bonoscer" id="BONOS CER"></div>
+      <div class="box lcer" id="financieros"></div>
+      <div class="box crpt" id="paises"></div>
+      <div class="box usa" id="asia"></div>
+      <div class="box bdl" id="europa"></div>
+      <div class="box noticias">
+        <h3>Noticias</h3>
+        <div
+          class="scrollWrapper"
+          onMouseover="scrollspeed=0"
+          onMouseout="scrollspeed=current"
+        >
+          <div id="scroll">
+            <div class="title">
+              <a href="http://www.rava.com/articulo/13051" target="_blank"
+                >Todas las miradas en las FAANG</a
+              >
+            </div>
+            <div class="content">
+              Segundo día de una semana clave en Wall Street. Inmersos en la
+              temporada de balances, antes de la campana inicial se conoció que
+              los números de Coca Cola (KO) fueron mejor a la esperado por los
+              analistas.
+              <a href="http://www.rava.com/articulo/13051" target="_top"
+                ><img
+                  class:img-noti
+                  src="https://clasico.rava.com/imagenes/Web-Ayelen.png"
+                  alt=""
+                  height="100px"
+                  width="150px"
+              /></a>
+            </div>
+            <div class="title">
+              <a href="http://www.rava.com/articulo/13047" target="_blank"
+                >Esta semana definen los 5 grandes</a
+              >
+            </div>
+            <div class="content">
+              Segunda vela positiva para Wall Street. El mercado inició esta
+              semana al alza desde la apertura de la rueda. Tras un breve
+              traspié inicial y un descanso durante la tarde, los índices
+              tuvieron un muy buen desempeño continuando con el rebote del
+              pasado viernes.
+              <a href="http://www.rava.com/articulo/13047" target="_top"
+                ><img
+                  class:img-noti
+                  src="https://clasico.rava.com/imagenes/Web-Fernando.png"
+                  alt=""
+                  height="100px"
+                  width="150px"
+              /></a>
+            </div>
+            <div class="title">
+              <a
+                href="https://www.ambito.com/finanzas/bonos/sp-merval-sube-cuarta-jornada-fila-riesgo-pais-rebota-6-bajas-al-hilo-n5568316"
+                target="_blank"
+                >S&P Merval sube por cuarta jornada en fila; riesgo país rebota
+                tras 6 bajas al hilo</a
+              >
+            </div>
+            <div class="content">
+              El índice accionario líder ganaba un 1,1%, a 145.165,27 unidades,
+              encabezado por las mejoras anotadas en títulos energéticos. En
+              cambio, los bonos en dólares perdían fuerza y cedían hasta más de
+              1%, tras una semana de firmes avances.
+              <a
+                href="https://www.ambito.com/finanzas/bonos/sp-merval-sube-cuarta-jornada-fila-riesgo-pais-rebota-6-bajas-al-hilo-n5568316"
+                target="_top"
+                ><img
+                  class:img-noti
+                  src="https://media.ambito.com/p/43f95468f009d259e0dc05a9a2f65efd/adjuntos/239/imagenes/038/853/0038853325/economia-mercados-inversiones-bonos-adrs-indices-cotizacion.jpg"
+                  alt=""
+                  height="100px"
+                  width="150px"
+              /></a>
+            </div>
+            <div class="title">
+              <a
+                href="https://es.investing.com/news/cryptocurrency-news/cripto-podria-convertirse-en-un-instrumento-financiero-regulado-en-reino-unido-2310745"
+                target="_blank"
+                >Cripto podría convertirse en un instrumento financiero regulado
+                en Reino Unido</a
+              >
+            </div>
+            <div class="content">
+              Una nueva enmienda al Proyecto de Ley de Mercados y Servicios
+              Financieros podría regular los criptoactivos como Bitcoin junto
+              con las stablecoins.
+              <a
+                href="https://es.investing.com/news/cryptocurrency-news/cripto-podria-convertirse-en-un-instrumento-financiero-regulado-en-reino-unido-2310745"
+                target="_top"
+                ><img
+                  class:img-noti
+                  src="https://i-invdn-com.investing.com/news/LYNXMPED0415S_L.jpg"
+                  alt=""
+                  height="100px"
+                  width="150px"
+              /></a>
+            </div>
+            <div class="title">
+              <a
+                href="https://www.ambito.com/finanzas/fitch/le-la-nota-argentina-profundos-desequilibrios-macroeconomicos-n5568380"
+                target="_blank"
+                >Fitch le bajó la nota a Argentina por "profundos desequilibrios
+                macroeconómicos"</a
+              >
+            </div>
+            <div class="content">
+              Se trata de la calificación crediticia soberana de largo plazo.
+              Dispuso bajar en un escalón la nota, pasando de "CCC" a "CCC-",
+              ante profundos desequilibrios macroeconómicos y una posición de
+              liquidez externa muy limitada.
+              <a
+                href="https://www.ambito.com/finanzas/fitch/le-la-nota-argentina-profundos-desequilibrios-macroeconomicos-n5568380"
+                target="_top"
+                ><img
+                  class:img-noti
+                  src="https://media.ambito.com/p/8e53c3de34d0186cac828ef589fd49a2/adjuntos/239/imagenes/038/325/0038325355/fitchjpg.jpg"
+                  alt=""
+                  height="100px"
+                  width="150px"
+              /></a>
+            </div>
+            <div class="title">
+              <a
+                href="https://www.ambito.com/finanzas/dolar/hoy-cuanto-cerro-este-miercoles-26-octubre-n5568434"
+                target="_blank"
+                >Dólar hoy: a cuánto cerró este miércoles 26 de octubre</a
+              >
+            </div>
+            <div class="content">
+              Mirá a cuánto cotizó el dólar, dólar blue, dólar ahorro, el dólar
+              turista, dólar MEP, dólar CCL y dólar cripto en la Argentina.
+              <a
+                href="https://www.ambito.com/finanzas/dolar/hoy-cuanto-cerro-este-miercoles-26-octubre-n5568434"
+                target="_top"
+                ><img
+                  class:img-noti
+                  src="https://media.ambito.com/p/1009762e490c658e6a3505cb621fce4d/adjuntos/239/imagenes/039/997/0039997051/bcra-banco-central.jpg"
+                  alt=""
+                  height="100px"
+                  width="150px"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box footer">
+        <img
+          class="logoFooter"
+          src="img/logoFooter.png"
+          alt="Logo de la pagina"
+        />
+        <section class="menuPaginas">
+          <nav class="navFooter">
+            <a class="navFooter" href="#">Inicio</a>
+            <a class="navFooter" href="noticias.html">Noticias</a>
+            <a class="navFooter" href="contacto.html">Contacto</a>
+          </nav>
+        </section>
+        <section>
+          <nav class="menuRedes">
             <ul>
-                <li>Oficial</li>
-                <li>Mayorista</li>
-                <li>CCL - GD30</li>
-                <li>MEP - AL30</li>
+              <a class="iconosRedes" href="https://www.instagram.com/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a class="iconosRedes" href="https://twitter.com"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a class="iconosRedes" href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a class="iconosRedes" href="https://www.linkedin.com/"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
             </ul>
-        </div>
-        <div class="box noticias" id="NOTICIAS">
-            <H3>NOTICIAS</H3>
-            <ul>
-                <!--pueder ser links -->
-                <li>Noticia 1</li>
-                <li>Noticia 2</li>
-                <li>Noticia 3</li>
-                <li>Noticia 4</li>
-            </ul>
-        </div>
-        <div class="box bonoscer" id="BONOS CER">
-            <H3>BONOS CER</H3>
-            <ul>
-                <li>T2X2</li>
-                <li>T2X3</li>
-                <li>TX23</li>
-                <li>TX24</li>
-            </ul>
-        </div>
-        <div class="box letras" id="LETRAS">
-            <H3>LETRAS</H3>
-            <table>
-                <tr>
-                    <td>S30S2</td>
-                    <td class="coti" style="color: red">$95</td>
-                </tr>
-                <tr>
-                    <td>S30N2</td>
-                    <td class="coti">$93</td>
-                </tr>
-                <tr>
-                    <td>S30D2</td>
-                    <td class="coti" style="color: green">$92</td>
-                </tr>
-                <tr>
-                    <td>S31E3</td>
-                    <td class="coti">$91</td>
-                </tr>
-            </table>
-        </div>
-        <div class="box box5">5</div>
-        <div class="box box6">6</div>
-        <div class="box box7">7</div>
-        <div class="box box8">8</div>
-        <div class="box box9">9</div>
+          </nav>
+        </section>
+        <p class="copyright">
+          Trading Codo a Codo - Copyright ©2022. Agente de Liquidación y
+          Compensación, Agente de mercados y Agente de Negociación Propio.
+          Buenos Aires, Argentina. Todos los derechos reservados.
+        </p>
+      </div>
     </div>
-</body>
-
+    <script type="text/javascript" src="js/mktstack.js"></script>
+  </body>
 </html>
