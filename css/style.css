@@ -100,7 +100,7 @@ ul {
   display: inline-block;
   color: whitesmoke;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 10px 15px;
   line-height: normal;
   font-size: 2rem;
   font-weight: bold;
@@ -454,8 +454,8 @@ form fieldset{
   }
 
   .nav-header a {
-    font-size: 2rem;
-    padding: 10px 10px;
+    font-size: 1.8rem;
+    padding: 10px 9px;
   }
 
   .galery {
@@ -533,7 +533,7 @@ form fieldset{
 
   .nav-header a,
   .navFooter {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 10px 5px;
   }
 
