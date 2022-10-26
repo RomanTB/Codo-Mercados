@@ -230,7 +230,7 @@ ul {
   margin: 1px;
   z-index: -1;
   padding: 5px;
-  z-index: 9999999;
+  z-index: 9999;
 }
 #scroll .title {
   font-weight: bold;
@@ -264,6 +264,9 @@ grid-area: noti;
 min-width: 100%;
 min-height: 99%;
 overflow:hidden;
+}
+.noticias2 h3 {
+  font-size: 3.5rem;
 }
 
 .scroll-noticias {
@@ -306,7 +309,7 @@ overflow:hidden;
 }
 
 .titulo-form{
-  font-size: 400%;
+  font-size: 3.5rem;
   margin-bottom: 2%;
   color: goldenrod;
 }
@@ -382,10 +385,7 @@ form fieldset{
   position: relative;
   bottom: 20px;
 }
-.iconosRedes:visited {
-  background-color: transparent;
-  text-decoration: none;
-}
+
 .menuPaginas{
   text-align: left;
   margin-bottom: -20px;
@@ -398,7 +398,6 @@ form fieldset{
   font-weight: bold;
 }
 .navFooter:link {
-  /* color: white; */
   background-color: transparent;
   text-decoration: none;
 }
@@ -409,10 +408,7 @@ form fieldset{
   background-color: transparent;
     
 }
-.navFooter:visited {
-  background-color: transparent;
-  text-decoration: none
-}
+
 .copyright{
   font-size: 1.2rem;
 }
@@ -439,9 +435,14 @@ form fieldset{
   grid-area: pf;
 }
 
+.titulo-pf {
+  font-size: 3.5rem;
+  color: goldenrod;
+  border-bottom: 1px solid whitesmoke;
+}
 .listaPreguntas{
   margin: 4% auto 0;
-  
+  font-size: 2rem;
 }
 dl{
   width: 60%;
@@ -535,6 +536,12 @@ dl dt:hover{
     font-size: 150%;
   }
   
+  .titulo-pf {
+    font-size: 3rem;
+  }
+  .listaPreguntas{
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 900px) {
@@ -623,6 +630,13 @@ dl dt:hover{
   .enviar{
     width: 15%;
     font-size: 150%;
+  }
+
+  .titulo-pf {
+    font-size: 2.5rem;
+  }
+  .listaPreguntas{
+    font-size: 1.2rem;
   }
 }
 
@@ -733,6 +747,13 @@ dl dt:hover{
 
   fieldset label {
     font-size: 1.2rem;
+  }
+
+  .titulo-pf {
+    font-size: 2.2rem;
+  }
+  .listaPreguntas{
+    font-size: 1rem;
   }
 }
 
