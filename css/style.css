@@ -214,7 +214,7 @@ ul {
   justify-content: space-between;
 }
 
-.footer {
+/* .footer {
   grid-area: footer;
   display: grid;
 }
@@ -230,7 +230,7 @@ ul {
 .footer a{
   margin: 0 40px 0 0;
 
-}
+} */
 
 /* Scroll ---------------------------------------------------- */
 
@@ -282,78 +282,44 @@ ul {
 }
 
 /* Pagina Contacto --------------------------------------------------------------------- */
-header nav{
-  position: absolute;
-  right: 0;
-}
 
-.footer nav li{
-  display: inline;
-  margin: 0 12px 0 10px;
-}
-
-.footer nav a{
-  text-transform: uppercase;
-  color: #a2a2a2;
-  font-weight: bold;
-  font-size: 24px;
-  text-decoration: none;
-}
-
-.footer nav a:hover{
-  color: #c78c19;
-  text-decoration: underline;
-}
-.formulario{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  background-color: #1f2c34;
-  padding: 10px;
-  color: whitesmoke;
-  border-radius: 10px;
-}
-
-form{
-  margin: 40px 0;
-  align-items: center;
-  padding: auto;
-}
-.titulo-form, .texto-form{
-  text-align: center ;
-  font-family:'Courgette', cursive, Arial, Helvetica, sans-serif;
-  color: rgb(120, 120, 120);
-}
-
+#contenedorContacto{
+  grid-template-columns: repeat(1, 1fr);
+} 
 .titulo-form{
-  font-size: 200%;
-  
+  font-size: 400%;
+  margin-bottom: 2%;
 }
 .texto-form{
-  font-size: 120%;
+  font-size: 200%;
+}
+form{
+  margin: 40px 20% 10px 20%;
 }
 form label, form legend{
   display: block;
-  font-size: 20px;
+  font-size: 160%;
   margin: 0 0 10px;
 }
-
 .input-padron{
   display: block;
-  margin: 0 0 20px;
+  margin: 0 auto 20px auto;
   padding: 10px 25px;
   width: 50%;
+  border-radius: 20px;
 }
-
 .checkbox{
-  margin:20px 0;
+  margin:2% 0;
 }
-
+form fieldset{
+  border-radius: 20px;
+  border-style: inset;
+}
 .enviar{
-  width: 40%;
+  width: 20%;
   padding: 10px 0;
   margin: 10px;
-  font-size: 18px;
+  font-size: 180%;
   font-weight: bold;
   color:white;
   background: rgb(70, 24, 251);
@@ -364,32 +330,71 @@ form label, form legend{
 }
 
 .enviar:hover{
-  background: rgb(119, 106, 232);
+  background: rgb(100, 83, 255);
   transform: scale(1.12);
 }
 
-footer{
-  text-align: center;
-  background: #354a57;
-  padding:40px;
+
+/* style para el footer --------------------------------*/
+
+.footer{
+  margin-top: -4%;
+  padding-bottom: 2%;
+  grid-area: footer;
+  display: grid;
 }
-footer a img{
-  display: block;
+
+.logoFooter{
   max-width: 15%;
   height: auto;
-  margin-right: auto;
-  margin-left: auto;
-
+  position: relative;
+  top: 30px;
 }
-footer a{
+.menuRedes{
+  text-align: right;
+}
+.iconosRedes{
   margin: 0 40px 0 0;
-
+  font-size: 26px;
+  color: rgb(72, 117, 255);
+  position: relative;
+  bottom: 20px;
 }
-
+.iconosRedes:visited {
+  color: rgb(96, 215, 81);
+  background-color: transparent;
+  text-decoration: none;
+}
+.menuPaginas{
+  text-align: left;
+  margin-bottom: -20px;
+}
+.navFooter{
+  text-decoration: none;
+  padding: 10px 20px;
+  line-height: normal;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.navFooter:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+  
+.navFooter:hover {
+  color: rgb(72, 117, 255);
+  background-color: transparent;
+    
+}
+.navFooter:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none
+}
 .copyright{
-  color:#FFFFFF;
-  font-size: 13px;
-  margin:0 8% 0 8%;
+  font-size: 11px;
+  margin:0 8% -2% 8%;
 }
 
 /* Responsive --------------------------------------------------------------- */
