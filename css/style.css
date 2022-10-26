@@ -285,7 +285,19 @@ ul {
 
 #contenedorContacto{
   grid-template-columns: repeat(1, 1fr);
+  display: grid;
+  min-width: 99%;;
+	max-width: 1900px;
+  gap: 1.2rem;
+  padding: 10px;
+  overflow: hidden;
 } 
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
 .titulo-form{
   font-size: 400%;
   margin-bottom: 2%;
@@ -337,8 +349,11 @@ form fieldset{
 
 /* style para el footer --------------------------------*/
 
+.linkHome {
+
+}
+
 .footer{
-  margin-top: -4%;
   padding-bottom: 2%;
   grid-area: footer;
   display: grid;
@@ -584,7 +599,7 @@ form fieldset{
   position: relative;
   animation: change 10s infinite;
 }
-.rotate-span{
+.rotate-span {
   display: block;
   color: goldenrod;
   margin-left: 5px;
