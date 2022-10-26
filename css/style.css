@@ -439,6 +439,38 @@ form fieldset{
   grid-area: pf;
 }
 
+.listaPreguntas{
+  margin: 4% auto 0;
+  
+}
+dl{
+  width: 60%;
+  padding: 10px;
+  border-radius:5px;
+}
+dl dt,dl dd, dl li{
+  display: flex;
+  padding: 10px 20px;
+  margin: 5px 0;
+  transition: .5s;
+  border-radius: 10px;
+}
+dl dd{
+  margin-left: 4%;
+}
+dl li{
+  justify-content: center;
+  margin: 2%;
+  font-weight: bold;
+}
+dl dt:hover{
+  transform: scale(1.06);
+  background: black;
+}
+.listaPreguntas a{
+  margin-left: 3px;
+}
+
 
 /* Responsive --------------------------------------------------------------- */
 @media (max-width: 1200px) {
