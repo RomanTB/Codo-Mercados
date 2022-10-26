@@ -89,7 +89,7 @@ function consumoToHTML(tickers) {
   }
 
   axios
-    .get('http://api.marketstack.com/v1/eod/latest', { params })
+    .get('https://api.marketstack.com/v1/eod/latest', { params })
     .then(function (response) {
       var consumo_info = response.data
       console.log(consumo_info)
